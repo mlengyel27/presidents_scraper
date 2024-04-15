@@ -31,7 +31,7 @@ class President_Speech_Analysis:
     def make_corpus(self): 
         corpus = []
         corpus_aslist = []
-        filenames = glob(f'D:/Dokumentumok/egyetemek/AdvancedMA/scripting_languages/finalp/texts/{self.pres_name}/*.txt')
+        filenames = glob(f'texts/{self.pres_name}/*.txt')
         for filename in filenames:
             text = self.read_file(filename)
             corpus.append(self.preprocess(text))
@@ -82,11 +82,11 @@ class President_Speech_Analysis:
         return war_rank, peace_rank
 
 
-foldernames = os.listdir('D:/Dokumentumok/egyetemek/AdvancedMA/scripting_languages/finalp/texts/')
+foldernames = os.listdir('/texts/')
 
 for foldername in foldernames[:10]:
 
-    pres_analysis = President_Speech_Analysis('D:/Dokumentumok/egyetemek/AdvancedMA/scripting_languages/finalp/texts/', foldername)
+    pres_analysis = President_Speech_Analysis('/texts/', foldername)
 
     average_words_per_sentence = pres_analysis.words_per_sentence()
     hapax_ratio = pres_analysis.hapax_ratio()
