@@ -109,6 +109,6 @@ def tapp_scraper(president_number, filepath,  title_as_filename, title_included)
     print("Number of texts failed to retrieve for", president_number, ": " ,failure_counter)
     print("Number of texts retrieved", president_number, ": " , success_counter)
 
-# scrape speeches for first 30 presidents
+# scrape speeches for first 10 presidents
 for i in range(1,10):
-    tapp_scraper(i, 'D:/Dokumentumok/egyetemek/AdvancedMA/scripting_languages/finalp/tests/', title_as_filename = True, title_included = False)
+    tapp_scraper(i, 'filepath', title_as_filename = True, title_included = False)
